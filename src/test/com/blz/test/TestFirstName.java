@@ -19,16 +19,21 @@ public class TestFirstName {
 		Scanner sc = new Scanner(System.in);
 		int key=0;
 		while(key!=2) {
-			System.out.println("Select From Option\n1.Enter First Name\n2.exit");
-			key = sc.nextInt();
-			switch (key) {
-			case 1:
-				System.out.println("Enter First Name");
-				String userName = sc.next();
-				validTest(userRegistrationValid, userName);
-				break;
-			default:
-				break;
+			try {
+				System.out.println("Select From Option\n1.Enter First Name\n2.exit");
+				key = sc.nextInt();
+				switch (key) {
+				case 1:
+					System.out.println("Enter First Name");
+					String userName = sc.next();
+					validTest(userRegistrationValid, userName);
+					break;
+				default:
+					break;
+				}
+			}catch (Exception e) {
+				System.out.println(e);
+				key=2;
 			}
 		}
 		

@@ -20,4 +20,8 @@ public class UserRegistrationValid {
 	public boolean lastName(String userLastName) {
 		return IsValidPattern(userLastName, Constants.LAST_NAME_REGEX);
 	}
+	
+	public boolean EmailID(String userEmail) {
+		return IsValidPattern(userEmail, Constants.EMAIL_ID_REGEX);
+	}
 }
