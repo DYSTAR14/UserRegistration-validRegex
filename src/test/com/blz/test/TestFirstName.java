@@ -19,7 +19,7 @@ public class TestFirstName {
 		Scanner sc = new Scanner(System.in);
 		int key=0;
 		while(key!=2) {
-			System.out.println("1.Enter First Name\n2.exit");
+			System.out.println("Select From Option\n1.Enter First Name\n2.exit");
 			key = sc.nextInt();
 			switch (key) {
 			case 1:
