@@ -15,8 +15,8 @@ public class TestPassword {
 		UserRegistrationValid userRegistrationValid = new UserRegistrationValid();
 		
 		validTest(userRegistrationValid, "Deepak@123");
-		validTest(userRegistrationValid, "De@py1");
-		validTest(userRegistrationValid, "Ye@py1");
-		validTest(userRegistrationValid, "De@py1");
+		validTest(userRegistrationValid, "de@py123");
+		validTest(userRegistrationValid, "deepak@123");
+		validTest(userRegistrationValid, "yadave@py1");
 	}
 }
