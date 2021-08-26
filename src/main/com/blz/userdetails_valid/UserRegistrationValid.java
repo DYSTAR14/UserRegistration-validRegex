@@ -28,4 +28,8 @@ public class UserRegistrationValid {
 	public boolean MobileNumber(String userMobile) {
 		return IsValidPattern(userMobile, Constants.MOBILE_NUMBER_REGEX);
 	}
+	
+	public boolean Password(String userPass) {
+		return IsValidPattern(userPass, Constants.PASSWORD_REGEX);
+	}
 }
