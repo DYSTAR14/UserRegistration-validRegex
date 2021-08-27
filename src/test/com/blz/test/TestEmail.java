@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.swing.text.StyledEditorKit.ForegroundAction;
-
 import com.blz.userdetails_valid.UserRegistrationValid;
 
 public class TestEmail {
