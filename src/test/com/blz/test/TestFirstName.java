@@ -2,10 +2,11 @@ package com.blz.test;
 
 import java.util.Scanner;
 
+import com.blz.exception.InvalidInputException;
 import com.blz.userdetails_valid.UserRegistrationValid;
 
 public class TestFirstName {
-	public static void validTest(UserRegistrationValid userRegistrationValid, String userName) {
+	public static void validTest(UserRegistrationValid userRegistrationValid, String userName) throws InvalidInputException {
 		if(userRegistrationValid.firstName(userName)) {
 			System.out.println("Your ("+userName+") Name is Valid");
 		}
