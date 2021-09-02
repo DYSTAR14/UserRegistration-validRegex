@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.blz.exception.InvalidInputException;
 import com.blz.userdetails_valid.UserRegistrationValid;
 
 public class MobileNumberTest {
@@ -11,23 +12,23 @@ public class MobileNumberTest {
 	UserRegistrationValid userRegistrationValid = new UserRegistrationValid();
 	
 	@Test
-	public void testMobileValid_success() {
+	public void testMobileValid_success() throws InvalidInputException {
 		assertTrue(userRegistrationValid.MobileNumber("91 9819025627"));
 	}
 	
-	@Test
-	public void testMobile_LessDigitNumber_fail() {
-		assertFalse(userRegistrationValid.MobileNumber("234423"));
+	@Test(expected = InvalidInputException.class)
+	public void testMobile_LessDigitNumber_fail() throws InvalidInputException {
+		userRegistrationValid.MobileNumber("234423");
 	}
 	
-	@Test
-	public void testMobile_MoreDigitNumber_fail() {
-		assertFalse(userRegistrationValid.MobileNumber("9819025627234"));
+	@Test(expected = InvalidInputException.class)
+	public void testMobile_MoreDigitNumber_fail() throws InvalidInputException {
+		userRegistrationValid.MobileNumber("9819025627234");
 	}
 	
-	@Test
-	public void testMobileEmpty_fail() {
-		assertFalse(userRegistrationValid.MobileNumber(" "));
+	@Test(expected = InvalidInputException.class)
+	public void testMobileEmpty_fail() throws InvalidInputException {
+		userRegistrationValid.MobileNumber(" ");
 	}
 
 }
