@@ -4,10 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import com.blz.exception.InvalidInputException;
 import com.blz.userdetails_valid.UserRegistrationValid;
 
 public class TestEmail {
-	public static void validTest(UserRegistrationValid userRegistrationValid, String userEmail) {
+	public static void validTest(UserRegistrationValid userRegistrationValid, String userEmail) throws InvalidInputException {
 		if (userRegistrationValid.EmailID(userEmail)) {
 			System.out.println("Your Email (" + userEmail + ") is Valid");
 		} else {
@@ -15,7 +16,7 @@ public class TestEmail {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidInputException {
 		UserRegistrationValid userRegistrationValid = new UserRegistrationValid();
 		Scanner sc = new Scanner(System.in);
 		List<String> emailIds = Arrays.asList(

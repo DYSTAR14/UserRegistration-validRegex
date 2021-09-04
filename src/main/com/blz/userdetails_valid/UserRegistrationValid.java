@@ -29,7 +29,6 @@ public class UserRegistrationValid {
 	}
 	
 	public boolean EmailID(String userEmail) throws InvalidInputException {
-//		return IsValidPattern(userEmail, Constants.EMAIL_ID_REGEX);
 		if(IsValidPattern(userEmail, Constants.EMAIL_ID_REGEX))
 			return true;
 		else

@@ -2,10 +2,11 @@ package com.blz.test;
 
 import java.util.Scanner;
 
+import com.blz.exception.InvalidInputException;
 import com.blz.userdetails_valid.UserRegistrationValid;
 
 public class TestMobileNumber {
-	public static void validTest(UserRegistrationValid userRegistrationValid, String userMobile) {
+	public static void validTest(UserRegistrationValid userRegistrationValid, String userMobile) throws InvalidInputException {
 		if (userRegistrationValid.MobileNumber(userMobile)) {
 			System.out.println("Your Number (" + userMobile + ") is Valid");
 		} else {
